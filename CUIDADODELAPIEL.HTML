@@ -1,0 +1,461 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUIDADO DE LA PIEL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    header {
+      background-image: url('https://clinicalevanterivas.com/wp-content/uploads/2021/09/pexels-sora-shimazaki-5938561-732x488.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    header h1 {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-size: 36px;
+      color: white;
+      text-shadow: 2px 2px 6px #000;
+    }
+    .top-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+    .top-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      max-width: 1300px;
+      margin: auto;
+    }
+    .left-column {
+      width: 300px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    nav h3 {
+      color: #000080;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin-bottom: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+    }
+    .ads, .news {
+      margin-top: 30px;
+      background-color: #ffe6f0;
+      padding: 15px;
+      border-left: 3px solid #ff99cc;
+      border-radius: 10px;
+    }
+    .ads h3, .news h3 {
+      color: #d60073;
+      margin-top: 0;
+    }
+    .ad, .notice {
+      background-color: #fff0f5;
+      border: 1px solid #ffb6c1;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    main {
+      flex: 1;
+      padding: 30px;
+    }
+    h2 {
+      color: #000080;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    #search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+    #searchInput {
+      width: 400px;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    .search-icon {
+      margin-left: -35px;
+      cursor: pointer;
+    }
+    section img {
+      max-width: 40%;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function searchContent() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const sections = document.querySelectorAll("main section");
+      sections.forEach(section => {
+        section.style.display = section.innerText.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Contenido principal -->
+  <div id="main-content">
+    <header>
+      <h1>Cuidado de la Piel</h1>
+      <div class="top-links">
+        <a href="#">Pedir una cita</a>
+        <a href="#">Iniciar sesión</a>
+        <a href="#">Donar</a>
+      </div>
+    </header>
+
+    <div id="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar tema..." onkeyup="searchContent()">
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="container">
+      <div class="left-column">
+        <nav>
+          <h3>Temas relacionados</h3>
+          <ul>
+            <li><a href="#importancia">Importancia</a></li>
+            <li><a href="#mitos">Mitos vs Realidad</a></li>
+            <li><a href="#consejos">Consejos Generales</a></li>
+            <li><a href="#tipos">Tipos de piel</a></li>
+            <li><a href="#edad">Cambio según edad</a></li>
+            <li><a href="#rutina">Rutinas básicas</a></li>
+            <li><a href="#productos">Productos esenciales</a></li>
+            <li><a href="#marcas">Marcas recomendadas</a></li>
+            <li><a href="#problemas">Rutinas especializadas</a></li>
+            <li><a href="#enfermedades">Enfermedades comunes</a></li>
+            <li><a href="#alimentacion">Alimentación y estilo de vida</a></li>
+            <li><a href="#dermatologo">Visita al dermatólogo</a></li>
+            <li><a href="#solar">Protección solar</a></li>
+          </ul>
+        </nav>
+
+        <div class="ads">
+          <h3>Anuncios</h3>
+          <div class="ad">
+            <strong>🌸 Nueva línea de cremas hidratantes</strong><br>
+            Piel radiante todo el día con ingredientes naturales. ¡Adquiérela ahora!
+          </div>
+          <div class="ad">
+            <strong>☀️ Protector Solar 50+ con aroma a coco</strong><br>
+            Protección y frescura para este verano. A prueba de agua.
+          </div>
+          <div class="ad">
+            <strong>🧴 Serum rejuvenecedor nocturno</strong><br>
+            Notarás la diferencia en 7 días. Fórmula con colágeno puro.
+          </div>
+          <div class="ad">
+            <strong>🎁 Paquetes faciales 2x1</strong><br>
+            Promoción especial en nuestra clínica de cuidado facial hasta fin de mes.
+          </div>
+        </div>
+
+        <div class="news">
+          <h3>📰 Noticias</h3>
+          <div class="notice">
+            <strong>Dermatólogos alertan por exceso de exfoliación</strong><br>
+            Un nuevo estudio muestra que exfoliarse más de 3 veces por semana puede dañar la barrera cutánea.
+          </div>
+          <div class="notice">
+            <strong>Lanzan campaña “Piel Sana, Vida Sana”</strong><br>
+            El gobierno impulsa hábitos saludables para prevenir enfermedades dermatológicas.
+          </div>
+          <div class="notice">
+            <strong>¡Nuevo ingrediente milagro en cosmética!</strong><br>
+            La rosa alpina promete ser el nuevo aliado contra el envejecimiento prematuro.
+          </div>
+          <div class="notice">
+            <strong>Conferencia internacional sobre piel sensible</strong><br>
+            Se celebrará en México el evento más grande de innovación en tratamientos dermatológicos.
+          </div>
+        </div>
+      </div>
+
+    <main>
+      <section id="importancia">
+        <h2>Importancia del cuidado de nuestra piel</h2>
+        <p> La piel es el órgano de nuestro cuerpo que está expuesto constantemente a agentes externos como el calor, el frio, el aire o las bacterias, entre otros. Gracias a la piel nuestro cuerpo esta protegido y mantiene la temperatura corporal adecuada.</p>
+<p>Se trata de la primera barrera de protección, ya que tiene propiedades inmunológicas. Además, nos permite disfrutar del sentido del tacto. Un sentido de gran importancia ya que esta presente en la mayoría de nuestras actividades diarias.</p>
+<p> la piel es una parte importante de nuestro cuerpo. Por ello, saber cuidarla es primordial. Lo primero que hay que hacer para cuidar la piel es conocerla, es decir, no todas las pieles son iguales. Dependiendo del tipo de piel el tratamiento y cuidado será diferente. Se pueden diferenciar cuatro tipos de pieles: seca, grasa, mixta y delicada. Para cada una de ellas hay cremas y productos específicos.
+
+Independientemente del tipo de piel, hay una serie de pautas que toda persona debe aplicar para el buen cuidado de la piel aunque siempre es aconsejable consultar con uno de nuestros dermatólogo.</p>
+
+<img src="https://vallemorilla.com/wp-content/uploads/2024/10/TRATAMIENTO-FACIAL-PARA-HOMBRES-2_11zon-1300x650.webp" alt="Importancia de la piel">
+      </section>
+
+      <section id="mitos">
+        <h2>Mitos vs Realidad</h2>
+        <p>1. Si no me maquillo, no me tengo que limpiar la piel</p>
+           <p>Falso. La piel del rostro está expuesta casi constantemente al exterior (y en interior, porque las partículas de polvo también cuentan) a lo largo del día, lo que hace que, inevitablemente, acumule suciedad. Esta obstruye los poros y puede hacer que se desarrollen microorganismos que obstaculizan el normal funcionamiento de la fisiología cutánea. </p>
+         <p>Los expertos insisten en que lavarse la cara por la noche (a veces, incluso de manera 'doble') es el mejor tratamiento de belleza, ya que de esta forma garantizamos que nuestra piel esté libre de agentes externos que agreden nuestro cutis a diario, incluso si no se usa maquillaje. </p>
+       <p>2. Limpiarse la cara en la ducha estropea la piel </p>
+       <p>Falso. No solo no la estropea, sino que es un gran truco de belleza, ya que el vapor que genera el agua promueve que los poros se abran y así tener una mejor exfoliación. Lo ideal es, después de una ducha caliente, exfoliarse el cutis una o dos veces por semana, como señala Carmen Díaz, Personal Skin Trainer del centro Germaine de Capuccini de Goya (Madrid). </p>
+       <p>Claro que no vale limpiarse con cualquier cosmético, lo mejor será tener en las baldas de la ducha una limpiadora con aclarado que cumpla la función. De hecho, es casi un truco para no saltarnos la limpieza matutina, o nocturna, y de no olvidarla jamás. </p>
+<p>3. Hay que lavar la cara con agua fría </p>
+<p>Verdad a medias. El agua fría puede ser de gran ayuda para mantener la firmeza y cerrar los poros, según Carmen Díaz. Sin embargo, Rocío Escalante, de Arbosana Farmacia, opina que lo mejor es usar agua templada,porque "tanto el agua caliente como la muy fría pueden dañar la piel, provocando sequedad, irritaciones...". </p>
+<p>Lo ideal, para rizar el rizo, es "usar agua templada y terminar con algo fría, evitando siempre la caliente, ya que su efecto vasodilatador puede provocar couperosis, rojeces y retirar la grasa natural de la piel en exceso", aclara Eva Raya, cosmetóloga y cocreadora de la marca Alice in Beautyland. </p>
+<p>4. La piel grasa no necesita hidratación </p>
+<p>Falso. Por supuesto que una piel grasa necesita hidratación. Es cierto que tiende a brillar y muchas veces eso nos lleva a pensar que las cremas no son necesarias porque van a incrementar ese exceso de sebo, pero no es así. </p>
+<p>"La piel grasa necesita hidratación y, de hecho, uno de sus problemas más frecuentes es la deshidratación, porque tendemos a usar productos de limpieza que la resecan", aclara Rocío Escalante. </p>
+<p> La clave está en elegir cremas hidratantes específicas para piel grasa, es decir, 'oil free' y no comedogénicas.</p>
+<p>5.Beber agua mantiene la piel hidratada </p>
+<p>Verdad. La piel ser hidrata desde el interior y desde el exterior, por lo que es importante aplicar un producto hidratante al menos dos veces al día y beber más de dos litros de agua, afirma Carmen Díaz del centro de estética Germaine de Capuccini de Goya. </p>
+<p>6.Los poros no se cierran ni desaparecen </p>
+<p>Verdad. Los poros son orificios a través de los que se abren las glándulas sebáceas. Por eso no se puede cerrar, por mucho que nos disguste su aspecto, aunque sí se pueden disminuir y prevenir que dilaten. Un poro limpio, libre y no obstruido resulta menos evidente, por eso la limpieza y la exfoliación son la clave, según detalla la dermatóloga Andrea Combalia. </p>
+
+
+      </section>
+
+      <section id="consejos">
+        <h2>Consejos generales</h2>
+        <p>Un buen cuidado de la piel no tiene por qué implicar una rutina compleja. Según la Clínica Mayo , unos pasos básicos contribuyen en gran medida a darle a tu piel el cuidado que merece.</p>
+
+<p>PROTEGETE: el sol es una de las principales causas de daño y envejecimiento de la piel. Para proteger tu piel, aplica un protector solar de amplio espectro con FPS 30 o superior, usa ropa protectora como mangas largas y un sombrero, y busca la sombra cuando el sol esté más fuerte, entre las 10 a. m. y las 4 p. m.</p>
+
+<p>HIDRATALA: Mantener la piel hidratada es esencial para una piel sana. Bebe abundante agua a lo largo del día y usa una crema hidratante adecuada para tu tipo de piel.</p>
+
+<p>SE SUAVE: limpiar, tonificar e hidratar son fundamentales para una buena rutina de cuidado de la piel. Evita usar productos agresivos al limpiar, ya que pueden despojar a tu piel de sus aceites naturales. Usa un tónico para equilibrar el pH de tu piel y una crema hidratante para hidratarla.</p>
+
+<p>SUEÑO: Dormir es importante para la salud general, incluyendo la salud de la piel. Durante el sueño, el cuerpo se regenera, incluyendo la piel. Intenta dormir de siete a nueve horas cada noche para que tu piel luzca radiante.</p>
+
+<p>COME BIEN: lo que comes tiene un impacto directo en tu piel. Incluye una variedad de frutas y verduras en tu dieta, así como proteínas magras, grasas saludables y cereales integrales. Evita los alimentos procesados ​​y el exceso de azúcar, que pueden causar inflamación y brotes.
+
+<p>NO FUME Y NO BEBA MUCHO: fumar y el consumo excesivo de alcohol pueden tener efectos negativos en la salud de la piel. Fumar puede causar envejecimiento prematuro, incluyendo líneas de expresión, arrugas y una tez apagada, mientras que el consumo excesivo de alcohol puede deshidratar la piel y provocar enrojecimiento e hinchazón.</p>
+
+<p>RELAJATE. Recuerda que tu piel es un órgano y el estrés puede desencadenar reacciones negativas. En el caso de la piel, esto incluye brotes y otros problemas. Mantén un estado mental saludable , establece límites razonables y haz cosas por ti.</p>
+      </section>
+
+      <section id="tipos">
+        <h2>Tipos de piel e identificación</h2>
+        <p>Si necesita ayuda para identificar su tipo de piel, el test cutáneo puede ser una herramienta útil. Si necesita consejos adicionales sobre la mejor manera de cuidarla, WAY le recomienda que contacte con un dermatólogo</p>
+      <p>PIEL NORMAL</p>
+      <p>"Normal" es un término utilizado ampliamente para referirse a la piel bien equilibrada. El término científico para la piel sana es eudérmica.</p>
+<img src="https://images-1.eucerin.com/~/media/eucerin/international/about-skin/basic-skin-knowledge/skin-types-complexions/eucerin-as-skin-types-01.webp" alt="Importancia de la piel">
+      <p>PIEL SECA </p>
+      <p>"Seca" se utiliza para describir un tipo de piel que produce menos sebo que la piel normal. Como consecuencia de la falta de sebo, la piel seca carece de los lípidos que necesita para retener humedad y formar un escudo protector frente a influencias externas</p>
+<img src="https://images-1.eucerin.com/~/media/eucerin/international/about-skin/basic-skin-knowledge/skin-types-complexions/eucerin-as-skin-types-02.webp" alt="Importancia de la piel">
+
+<p>PIEL GRASA</p>
+<p>"Grasa" se utiliza para describir un tipo de piel con producción acrecentada de sebo. La hiperproducción se conoce como seborrea.</p>
+<img src="https://images-1.eucerin.com/~/media/eucerin/international/about-skin/basic-skin-knowledge/skin-types-complexions/eucerin-as-skin-types-03.webp" alt="Importancia de la piel">
+<p>PIEL MIXTA</p>
+<p>La piel mixta es, como su nombre indica, una piel que consta de una mezcla de tipos de piel.</p>
+<img src="https://images-1.eucerin.com/~/media/eucerin/international/about-skin/basic-skin-knowledge/skin-types-complexions/eucerin-as-skin-types-04.webp" alt="Importancia de la piel">
+</section>
+
+      <section id="edad">
+        <h2>Cambios según la edad</h2>
+        <p>A lo largo de la vida, la piel atraviesa distintas transformaciones que reflejan tanto el paso del tiempo como los efectos de factores internos y externos. En la infancia, la piel es extremadamente suave, delgada y sensible, por lo que es común que se irrite fácilmente o presente enrojecimientos, especialmente en zonas expuestas al pañal o al clima. En esta etapa se necesita una hidratación delicada y protección solar básica.</p>
+
+<p>Durante la adolescencia, los cambios hormonales provocan un aumento en la producción de grasa, lo cual puede generar acné, puntos negros y brillo excesivo. La piel se vuelve más propensa a imperfecciones y necesita una limpieza adecuada para controlar el sebo sin resecarla.</p>
+
+<p>En la adultez temprana, entre los 20 y 35 años, la piel luce firme, elástica y saludable, pero también comienzan a aparecer los primeros signos de envejecimiento como líneas finas, ojeras o poros más visibles. Es una etapa ideal para implementar rutinas preventivas con antioxidantes, hidratantes profundos y protector solar diario.</p>
+
+<p>A partir de los 36 años y hasta los 50, la piel pierde progresivamente colágeno y elastina, lo que da lugar a la pérdida de firmeza, arrugas más visibles y manchas provocadas por el sol. Aquí es recomendable usar productos antiedad como el retinol, ácido hialurónico y fórmulas que ayuden a regenerar la piel.</p>
+
+<p>En la madurez, después de los 50 años, la piel se vuelve más delgada, seca y frágil. La renovación celular se ralentiza, por lo que es frecuente notar una textura opaca, deshidratación y flacidez. En esta etapa se requieren cuidados más intensivos, con productos ricos en lípidos, humectantes profundos y una limpieza suave para evitar la pérdida de la barrera natural.</p>
+
+En todas las edades, la clave está en adaptar los cuidados a las necesidades de la piel, mantener buenos hábitos como una alimentación equilibrada, dormir bien, evitar el estrés y protegerse del sol. Estos factores ayudan a conservar la salud y belleza de la piel a lo largo del tiempo.</p>
+
+<img src="https://medlineplus.gov/spanish/ency/images/ency/fullsize/8690.jpg" alt="Importancia de la piel">
+      </section>
+
+      <section id="rutina">
+        <h2>Rutinas básicas de mañana y noche</h2>
+        <p>🌞 Rutina de cuidado matutina (mañana)</p>
+<p>La rutina de la mañana tiene como objetivo preparar la piel para enfrentar el día, eliminar la grasa generada durante la noche y protegerla contra agentes externos.</p>
+
+<p>Limpieza suave: Utiliza un limpiador facial adecuado a tu tipo de piel (en gel si es grasa, en crema si es seca). Esto elimina el exceso de sebo y residuos acumulados durante el sueño.</p>
+
+<p>Tónico facial (opcional): Ayuda a equilibrar el pH de la piel y a cerrar los poros. Es especialmente útil para pieles mixtas o grasas.</p>
+
+<p>Suero (serum): Aporta activos concentrados como vitamina C, ácido hialurónico o antioxidantes, según las necesidades de tu piel.</p>
+
+<p>Contorno de ojos: Hidrata y desinflama esta zona delicada, ayudando a reducir ojeras o hinchazón.</p>
+
+<p>Hidratante facial: Mantiene la piel suave, protegida y elástica durante el día.</p>
+
+<p>Protector solar: Es el paso más importante. Protege contra los rayos UV, previene el envejecimiento prematuro, manchas y el cáncer de piel. Debe tener mínimo SPF 30 y aplicarse incluso si no sales de casa.</p>
+
+<p>🌙 Rutina de cuidado nocturna (noche)</p>
+<p>Por la noche, la piel entra en un proceso natural de regeneración. La rutina nocturna se enfoca en limpiar profundamente y nutrir para reparar los daños del día.</p>
+
+<p>Desmaquillante o limpiador bifásico: Si usaste maquillaje o protector solar, elimina primero estos productos con un desmaquillante suave.</p>
+
+<p>Limpieza profunda: Lava el rostro con un limpiador que retire impurezas, sudor y contaminación.</p>
+
+<p>Exfoliación (2-3 veces por semana): Ayuda a remover células muertas y afinar la textura de la piel. No debe hacerse a diario para no irritar.</p>
+
+<p>Tónico: Refresca, calma e hidrata ligeramente la piel.</p>
+
+<p>Suero nocturno: Idealmente con ingredientes como retinol, niacinamida o ácido glicólico para favorecer la renovación celular.</p>
+
+<p>Contorno de ojos: Aporta hidratación y ayuda a prevenir arrugas en la zona ocular.</p>
+
+<p>Crema hidratante nutritiva: Una fórmula más rica para regenerar la piel durante el descanso.</p>
+
+<p>Aceite facial (opcional): En pieles muy secas, puede añadirse al final para sellar la hidratación.</p>
+      </section>
+
+      <section id="productos">
+        <h2>Productos esenciales por tipo de piel</h2>
+        <p>CUIDADOS PARA PIEL SECA</p>
+<p>1.Cuando el nivel de sequedad se une a la deshidratación, es posible que la cosmética se quede corta. Para ello, la mejor solución es acudir al especialista médico estético para que realice una hidratación en profundidad. Una opción sería mediante ácido hialurónico no reticulado, es decir, muy fluido y que no aporta volumen; sencillamente con el fin de que éste capte agua.</p>
+
+<p>2.Otra opción sería la mesoterapia de vitaminas con ácido hialurónico; un cocktail muy completo aminoácidos y vitaminas. Como he comentado en otras ocasiones, donde llega la aguja, no llega ningún tratamiento cosmético, por lo que si buscas una mejora de la textura de tu piel, o la estimulación de la producción de colágeno, opta a ello mediante un tratamiento médico estético de este tipo.</p>
+     
+<p>CUIDADOS PARA LA PIEL GRASA</p>
+<p>1.Productos de limpieza, hidratación y foto-protección aptos para pieles grasas, que no contribuyan a la obstrucción del poro, es decir, que sean no comedogénicos, y que sean libres de aceites (oil-free). Recurre a texturas ligeras, emulsiones, o geles.</p>
+<p>2.Recurre a productos para tu rutina de limpieza formulados con ácido salicílico o ácido glicólico, activos seborreguladores.</p>
+<p>CUIDADOS PARA LA PIEL SENSIBLE</p>
+<p>1.Todos los tratamientos recomendados para este tipo de piel son aquellos específicos para reducir la inflamación o edema, aliviar las irritaciones y mejorar la función barrera.</p>
+<p>2.Un activo que no puede faltar en este tipo de piel es la niacinamida o el pantenol. Este tipo de sustancias van a mejorar mucho esa sensación de escozor o quemazón propio de la piel sensible.</p>
+<p>3.Dentro de las pieles sensibles estarían:</p>
+<p>1.Piel con tendencia al acné</p>
+<p>2.Piel con rosácea</p>
+<p>3.Piel con dermatitis seboerreica.</p>
+
+
+
+
+
+ </section>
+
+      <section id="marcas">
+        <h2>10 Marcas recomendadas</h2>
+        <ul>
+          <li><a href="https://www.cerave.com" target="_blank">CeraVe</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJiKML6cD5y1BuXOm6r36MObLUebgbnPgAHw&s" alt="Importancia de la piel">
+          <li><a href="https://www.laroche-posay.com" target="_blank">La Roche-Posay</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-atLySlrPhYkvMPh4vqUm9_ZEkGKyvL1h4A&s" alt="Importancia de la piel">
+          <li><a href="https://www.neutrogena.com" target="_blank">Neutrogena</a></li>
+<img src="https://www.google.com/imgres?q=neutrogena%20productos&imgurl=https%3A%2F%2Fimages.ctfassets.net%2Fppaxf755dps9%2F4Tdl1wC1wk0hpg4CbwkMmb%2F3883bf9cd6aaf9f6b9b2b9de5a6fe9cf%2Fbestsellers-rostro_1_1.png&imgrefurl=https%3A%2F%2Fwww.neutrogena.es%2Fproductos-cuidado-facial&docid=F7BtR37kIDYlJM&tbnid=o5_0CX3JuziQZM&vet=12ahUKEwiPodrxpYGOAxXEM0QIHSfDGqkQM3oECBgQAA..i&w=616&h=450&hcb=2&ved=2ahUKEwiPodrxpYGOAxXEM0QIHSfDGqkQM3oECBgQAA" alt="Importancia de la piel">
+          <li><a href="https://www.eucerin.com" target="_blank">Eucerin</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9oExJgs0hGkES9Dk_QtW9KqWVHNxaOtnDYw&s" alt="Importancia de la piel">
+          <li><a href="https://www.aveeno.com" target="_blank">Aveeno</a></li>
+<img src="https://www.google.com/imgres?q=aveeno%20productos&imgurl=https%3A%2F%2Fhttp2.mlstatic.com%2FD_NQ_NP_726561-MLM48682688069_122021-O.webp&imgrefurl=https%3A%2F%2Fwww.mercadolibre.com.mx%2Faveeno-baby-daily-care-set-4-piezas-para-bebe-y-mama%2Fp%2FMLM21774328&docid=TtOQqxa4IMfpBM&tbnid=TYsQJfF2bGzBtM&vet=12ahUKEwiQm6e8poGOAxUSDkQIHYvhDD8QM3oECB4QAA..i&w=500&h=367&hcb=2&ved=2ahUKEwiQm6e8poGOAxUSDkQIHYvhDD8QM3oECB4QAA" alt="Importancia de la piel">
+          <li><a href="https://www.vichy.com" target="_blank">Vichy</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9n7nvaAs2gFiqsO1xxNpqtAecsU9g-i1Xjg&s" alt="Importancia de la piel">
+          <li><a href="https://www.theordinary.com" target="_blank">The Ordinary</a></li>
+<img src="https://damarbeauty.com/cdn/shop/articles/the-ordinary-brand-background.jpg?v=1653082855" alt="Importancia de la piel">
+          <li><a href="https://www.bioderma.com" target="_blank">Bioderma</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D31EhanufmbG6lqYWFrd_93TO0paqSpiUA&s" alt="Importancia de la piel">
+          <li><a href="https://www.clinique.com" target="_blank">Clinique</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZMzsYdPzoiaSLPSF4UCztO5P75dQsPTcwA&s" alt="Importancia de la piel">
+          <li><a href="https://www.paulaschoice.com" target="_blank">Paula’s Choice</a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS0QCokChyK8IlvPw9h0UXGoOxqdLJnKOuqg&s" alt="Importancia de la piel">
+        </ul>
+      </section>
+
+      <section id="problemas">
+        <h2>Rutinas especializadas para problemas de piel</h2>
+        <p>🔴 PIEL CON ACNE</p>
+<p>El acné es una afección común que suele aparecer en la adolescencia, pero también puede afectar a adultos. Se caracteriza por granos, puntos negros, espinillas y enrojecimiento.</p>
+<p>·Limpieza: Usa un gel limpiador suave con ácido salicílico o peróxido de benzoilo. Evita productos abrasivos o jabones agresivos.</p>
+<p>·Tónico sin alcohol: Ayuda a calmar la piel sin resecarla más</p>
+<p>·Tratamientos específicos: Aplica sueros con niacinamida, ácido azelaico o retinoides (según indicación médica).</p>
+<p>·Hidratante ligera: Aunque tengas piel grasa, la hidratación es necesaria. Opta por fórmulas oil-free.</p>
+<p>·Protector solar: Fundamental para evitar manchas. Usa uno especial para pieles con tendencia acneica (no comedogénico).</p>
+<p>🌸 Piel con rosácea</p>
+<p>La rosácea se manifiesta con enrojecimiento facial persistente, sensibilidad, vasos dilatados y a veces granos. Es importante evitar cualquier factor que provoque brotes.</p>
+<p>·Limpieza suave: Usa limpiadores cremosos o en espuma suave, sin fragancias ni alcohol.</p>
+<p>·Tónico calmante: Busca ingredientes como agua de rosas, centella asiática o manzanilla.</p>
+<p>·Sueros o tratamientos: Elige productos con propiedades antiinflamatorias como la niacinamida, azeloglicina o aloe vera.</p>
+<p>·Hidratación: Cremas ligeras pero humectantes, que no irriten.</p>
+<p>·Protector solar mineral: Preferiblemente con óxido de zinc o dióxido de titanio, ya que no irritan la piel sensible.</p>
+<p>🧴 Piel con dermatitis (atópica o por contacto)</p>
+<p>La dermatitis puede causar picazón, enrojecimiento, descamación y sensación de ardor. Requiere cuidados constantes para mantener la piel protegida y sin brotes.</p>
+<p>·Limpieza sin jabón: Opta por limpiadores sin sulfatos, con pH fisiológico.</p>
+<p>·Evita el agua caliente: Prefiere duchas tibias y cortas.</p>
+<p>·Hidratación intensiva: Aplica cremas emolientes varias veces al día. Ingredientes como glicerina, urea o ceramidas son ideales.</p>
+<p>·Tratamientos médicos: Usa pomadas o cremas con corticosteroides o inmunomoduladores solo bajo receta médica.</p>
+<p>·Protección solar hipoalergénica: Muy importante para evitar que la piel reaccione al sol.</p>
+      </section>
+
+      <section id="enfermedades">
+        <h2>Enfermedades comunes y qué hacer</h2>
+        <p>No cuidar la piel puede causar acné, infecciones, envejecimiento prematuro. Consulta médica si hay síntomas persistentes.</p>
+      </section>
+
+
+      <section id="dermatologo">
+        <h2>Visita al dermatólogo</h2>
+        <p>Recomendado mínimo una vez al año. Si tienes problemas visibles, acude cuanto antes.</p>
+      </section>
+
+      <section id="solar">
+        <h2>Protección solar</h2>
+        <p>Una de las formas más importantes de cuidar la piel es protegerla del sol. Toda una vida de exposición al sol puede causar arrugas, manchas de la edad y otros problemas cutáneos. También puede aumentar el riesgo para cáncer de piel.
+
+</p>
+        <p>USA PROTECTOR SOLAR</p>
+ <p>Aplica una cantidad del tamaño de la palma de la mano de protector solar de amplio espectro con un FPS de al menos 30. Aplícate más protector solar cada dos horas o más a menudo si nadas o sudas.</p>
+       <p>QUEDATE EN LA SOMBRA</p>
+ <p>Procura no exponerte al sol entre las 10:00 y las 16:00 horas. Es entonces cuando los rayos ultravioleta (UV) del sol son más intensos.</p>
+      <p>USA ROPA DE PROTECCION</p>
+<p>Cúbrete la piel con camisas de manga larga de tela de trama cerrada, pantalones largos y sombreros de ala ancha. La ropa de colores oscuros suele proteger más que la de colores claros. Algunas prendas de protección solar están fabricadas para bloquear los rayos UV. También puedes utilizar aditivos para el lavado que proporcionan a la ropa una capa adicional de protección contra los rayos UV durante un número determinado de lavados.</p>
+
+    </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Síguenos en:</p>
+    <a href="#">Instagram</a>
+    <a href="https://wa.me/TU_NUMERO" target="_blank">WhatsApp</a>
+    <p>Contáctanos al número: <strong>+52 322 172 5413</strong></p>
+  </footer>
+</body>
+</html>
+
